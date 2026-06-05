@@ -97,6 +97,25 @@ A key methodological challenge of this study was the integration of the DPE and 
 
 To ensure consistency and improve the quality of the matching process, address information was standardized using data from the Base Adresse Nationale (BAN), the official French national address database. The BAN provides standardized address information through open-data files, APIs, and data streams, allowing addresses originating from different databases to be harmonized according to a common national reference system. By relying on BAN-standardized addresses, both the DPE and Enedis datasets could be aligned using consistent address formats and geographic identifiers.
 
+5. Methodology and Results are presented in 3 sections: Enedis_dpe_analysis, Merging DPE_Enedis, and, Results_DPE_Enedis
+
+7. Limitations
+
+While this study provides valuable macroscopic insights into the French residential energy sector, several inherent data and systemic limitations must be acknowledged:
+
+1. Physical and Governance Divergence: Houses vs. Apartments
+The operational realities of executing energetic retrofits differ fundamentally based on building typology:
+
+Detached Houses: The DPE assesses an independent envelope and individual equipment. Renovation decisions, financing, and implementation fall under a single owner's responsibility, allowing for rapid execution.
+
+Apartments: Individual apartment ratings are heavily influenced by collective building DPEs, shared walls, and common areas. Any structural renovation affecting the façade, insulation, or collective heating systems requires formal approval from the condominium association (copropriété). This fragmented governance makes implementation significantly slower, logicamente more complex, and often costlier, meaning theoretical DPE recommendations face much higher friction in multi-family buildings.
+
+2. Selection Bias and Database Representativeness
+As explicitly stated in official ADEME documentation, the DPE database does not cover the entire building stock and therefore it is not statistically representative of France's total housing reality. Because a DPE certificate is only legally triggered during real estate transactions (sales or new rental contracts), it suffers from a structural selection bias. Properties owned by long-term residents or those withheld from the market due to strict rental bans on energy-inefficient units (passoires énergétiques) are naturally underrepresented in the registry.
+
+3. Spatial Granularity Loss 
+A key technical constraint arises from the Base Adresse Nationale (BAN) geocoding framework. Because the BAN standardizes addresses at the building level and removes specific apartment numbers, all individual housing units within the same multi-family building collapse into an identical join_key. Consequently, this study loses the granularity needed to distinguish unique micro-units within a single structure. While this is an accepted limitation for aggregate, building-level analysis, it prevents the model from capturing unit-specific behavioral variations or micro-thermal exposures (e.g., top-floor vs. middle-floor apartments).
+
 References:
 (1) International Energy Agency (IEA). France – Energy Efficiency and Demand Indicators. Available at:
 https://www.iea.org/countries/france/efficiency-demand
