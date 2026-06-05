@@ -149,3 +149,5 @@ https://faere.fr/pub/WorkingPapers/Bakaloglou_Charlier_FAERE_WP2018.15.pdf
 
 (11) Schleich, J., et al. (2021). Energy Performance Gap and Household Behaviour. Energy Policy, 156. Available at:
 https://www.sciencedirect.com/science/article/abs/pii/S0301421521003505
+
+Camara, L. (2026). DPE & Enedis Open Data Analytics Dashboard. Streamlit Web Application. Available at: https://app-open-data-6r6aftrulbqkcbswykqbea.streamlit.app/
