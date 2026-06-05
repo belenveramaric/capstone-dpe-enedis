@@ -75,7 +75,7 @@ By providing empirical evidence on the relationship between theoretical energy p
 
 4. Data Methodology
     
-4. 1 Enedis Electricity Consumption Data
+4.1 Enedis Electricity Consumption Data
    
 This study relies on annual residential electricity consumption data provided by Enedis, the main electricity distribution network operator in France. The dataset contains measured electricity consumption aggregated at the address level for residential buildings comprising at least ten dwellings, a threshold established to ensure compliance with privacy regulations.
 
